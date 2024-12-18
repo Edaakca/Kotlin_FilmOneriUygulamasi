@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">BeyazperdeProjesi</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="favorite">Favorite</string>
+
+    <color name="status_bar_color">#131313</color>
+
+    <string-array name="film_genres">
+        <item>Dram</item>
+        <item>Macera</item>
+        <item>Aksiyon</item>
+        <item>Komedi</item>
+        <item>Gerilim</item>
+        <item>Korku</item>
+        <item>Bilim Kurgu</item>
+        <item>Tüm Türler</item>
+    </string-array>
+
+    <string name="genre_prompt">Tür seç</string>
+</resources>
+

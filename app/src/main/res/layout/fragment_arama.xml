@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:padding="16dp"
+    android:background="#6C7B9E">
+
+
+    <EditText
+        android:id="@+id/searchEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Film ara"
+        android:inputType="text"
+        android:padding="10dp"
+        android:textColor="@android:color/black"
+        android:background="@drawable/arama_edit_text" />
+
+
+    <com.google.android.material.chip.ChipGroup
+        android:id="@+id/genreChipGroup"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        app:singleSelection="false"
+        app:chipSpacing="8dp" />
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/aramaRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_marginTop="16dp" />
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="60dp" />
+
+</LinearLayout>

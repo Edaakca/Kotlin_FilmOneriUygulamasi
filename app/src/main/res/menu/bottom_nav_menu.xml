@@ -1,0 +1,26 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/anasayfa"
+        android:title="Ana Sayfa"
+        android:icon="@drawable/ic_home" /> <!-- Ana Sayfa İkonu -->
+    <item
+        android:id="@+id/filmler"
+        android:title="Filmler"
+        android:icon="@drawable/ic_movies" /> <!-- Filmler İkonu -->
+    <item
+        android:id="@+id/arama"
+        android:title="Arama"
+        android:icon="@drawable/ic_search"
+        />
+    <item
+        android:id="@+id/favoriler"
+        android:title="Favoriler"
+        android:icon="@drawable/ic_favorite" /> <!-- Favoriler İkonu -->
+
+    <item
+        android:id="@+id/profil"
+        android:title="Profil"
+        android:icon="@drawable/ic_profile"
+        />
+
+</menu>

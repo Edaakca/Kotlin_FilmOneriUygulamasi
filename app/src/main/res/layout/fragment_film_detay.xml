@@ -1,0 +1,190 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/detayFragmentLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:context="com.edaakca.beyazperdeprojesi.view.FilmDetayFragment">
+
+        <ImageView
+            android:id="@+id/posterImageView"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:contentDescription="poster_description"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@+id/titleTextView"
+            app:layout_constraintDimensionRatio="16:9"
+            android:scaleType="centerCrop"
+            android:adjustViewBounds="true" />
+
+        <TextView
+            android:id="@+id/titleTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:text="Film Başlığı"
+            android:textColor="@android:color/black"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="1.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/posterImageView" />
+
+        <TextView
+            android:id="@+id/releaseDateTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="28dp"
+            android:layout_marginEnd="152dp"
+            android:padding="8dp"
+            android:text="Yayın Tarihi: 2024-01-01"
+            android:textColor="@android:color/darker_gray"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.222"
+            app:layout_constraintStart_toStartOf="@+id/titleTextView"
+            app:layout_constraintTop_toBottomOf="@+id/titleTextView" />
+
+        <TextView
+            android:id="@+id/overviewTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="1dp"
+            android:padding="16dp"
+            android:text="Film özeti burada görünecek."
+            android:textColor="@android:color/black"
+            android:textSize="16sp"
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/releaseDateTextView" />
+
+        <TextView
+            android:id="@+id/showActorsButton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Oyuncular"
+            android:textColor="#1A5F65"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/overviewTextView"
+            app:layout_constraintTop_toBottomOf="@+id/overviewTextView" />
+
+        <TextView
+            android:id="@+id/actorsTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:padding="12dp"
+            android:text="Oyuncular Yükleniyor..."
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/showActorsButton" />
+
+
+        <TextView
+            android:id="@+id/reviewsTitleTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:text="Yorumlar"
+            android:textColor="#1A5F65"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/actorsTextView" />
+
+
+        <TextView
+            android:id="@+id/reviewsTextView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="12dp"
+            android:layout_marginRight="10dp"
+            android:text="Yorumlar Yükleniyor..."
+            android:textColor="@color/black"
+            android:textSize="14sp"
+            android:maxLines="7"
+            android:ellipsize="end"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsTitleTextView" />
+
+
+        <TextView
+            android:id="@+id/showMoreTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Devamını Gör"
+            android:textColor="#3F51B5"
+            android:textSize="14sp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsTextView" />
+
+        <TextView
+            android:id="@+id/showLessTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Daha Az Göster"
+            android:textColor="#3F51B5"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsTextView" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="32dp"
+            android:layout_marginTop="100dp"
+            android:text=""
+            android:visibility="visible"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/AnaliysResultTextView" />
+
+        <TextView
+            android:id="@+id/AnaliysResultTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duygu analizi sonucu burada görünecek"
+            android:layout_marginTop="16dp"
+            android:textSize="16sp"
+            android:padding="16dp"
+            android:visibility="gone"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="@+id/reviewsTextView"
+            app:layout_constraintTop_toBottomOf="@+id/reviewsTextView" />
+
+
+        <ImageView
+            android:id="@+id/favoriteButton"
+            android:layout_width="46dp"
+            android:layout_height="43dp"
+            android:contentDescription="@string/favorite"
+            android:padding="8dp"
+            android:src="@drawable/ic_favorite_border"
+            app:layout_constraintBottom_toBottomOf="@+id/releaseDateTextView"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.901"
+            app:layout_constraintStart_toEndOf="@+id/releaseDateTextView"
+            app:layout_constraintTop_toTopOf="@+id/releaseDateTextView" />
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</ScrollView>

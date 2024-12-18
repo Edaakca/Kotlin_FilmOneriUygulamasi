@@ -1,0 +1,107 @@
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:startDestination="@id/anasayfaFragment">
+
+    <fragment
+        android:id="@+id/anasayfaFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.AnasayfaFragment">
+        <action
+            android:id="@+id/action_anasayfaFragment_to_filmlerFragment"
+            app:destination="@id/filmlerFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_aramaFragment"
+            app:destination="@id/aramaFragment" />
+        <action
+            android:id="@+id/action_anasayfaFragment_to_filmDetayFragment"
+            app:destination="@id/filmDetayFragment" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/filmlerFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.FilmlerFragment"
+        android:label="FilmlerFragment" >
+        <action
+            android:id="@+id/action_filmlerFragment_to_detayFragment"
+            app:destination="@id/filmDetayFragment"
+            app:popUpTo="@id/filmlerFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/filmDetayFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.FilmDetayFragment"
+        tools:layout="@layout/fragment_film_detay">
+        <argument
+            android:name="movie"
+            app:argType="com.edaakca.beyazperdeprojesi.model.Movie" />
+    </fragment>
+
+
+    <fragment
+        android:id="@+id/favorilerFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.FavorilerFragment">
+        <action
+            android:id="@+id/action_favorilerFragment_to_filmDetayFragment"
+            app:destination="@id/filmDetayFragment">
+            <argument
+                android:name="movie"
+                app:argType="com.edaakca.beyazperdeprojesi.model.Movie" />
+        </action>
+        <action
+            android:id="@+id/action_favorilerFragment_to_girisMessageFragment"
+            app:destination="@id/girisMessageFragment" />
+    </fragment>
+
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.ProfileFragment"
+        android:label="Profil" >
+        <action
+            android:id="@+id/action_profileFragment_to_kullaniciFragment"
+            app:destination="@id/kullaniciFragment" />
+        <action
+            android:id="@+id/action_profileFragment_to_favorilerFragment"
+            app:destination="@id/favorilerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/kullaniciFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.KullaniciFragment"
+        android:label="fragment_kullanici"
+        tools:layout="@layout/fragment_kullanici" >
+        <action
+            android:id="@+id/action_kullaniciFragment_to_favorilerFragment"
+            app:destination="@id/favorilerFragment" />
+        <action
+            android:id="@+id/action_kullaniciFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_kullaniciFragment_to_izlemeListFragment"
+            app:destination="@id/izlemeListFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/aramaFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.AramaFragment"
+        android:label="fragment_arama"
+        tools:layout="@layout/fragment_arama" >
+        <action
+            android:id="@+id/action_aramaFragment_to_filmDetayFragment"
+            app:destination="@id/filmDetayFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/girisMessageFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.GirisMessageFragment"
+        android:label="fragment_giris_message"
+        tools:layout="@layout/fragment_giris_message" >
+        <action
+            android:id="@+id/action_girisMessageFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/izlemeListFragment"
+        android:name="com.edaakca.beyazperdeprojesi.view.IzlemeListFragment"
+        android:label="fragment_izleme_list"
+        tools:layout="@layout/fragment_izleme_list" />
+
+
+</navigation>

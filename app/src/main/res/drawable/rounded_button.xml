@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape xmlns:android="http://schemas.android.com/apk/res/android">
+    <!-- Arka plan rengi -->
+    <solid android:color="#ADDEE3" /> <!-- Gri tonunda arka plan rengi -->
+
+    <!-- Kenarları yuvarlatmak için -->
+    <corners android:radius="13dp" /> <!-- 16dp yuvarlak köşe -->
+
+
+    <!-- Dış boşluk -->
+    <padding android:left="8dp" android:top="6dp" android:right="8dp" android:bottom="6dp" />
+</shape>

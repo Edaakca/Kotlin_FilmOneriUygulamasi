@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "59009502493",
+    "project_id": "filmproject-f1c4b",
+    "storage_bucket": "filmproject-f1c4b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:59009502493:android:2d3f5d571fda275f9b25f4",
+        "android_client_info": {
+          "package_name": "com.edaakca.beyazperdeprojesi"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAsTNRbiMBex2NN3uAj8rXHushp6U63xYc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
